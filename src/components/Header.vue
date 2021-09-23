@@ -15,7 +15,7 @@ $primary-color: #00bf72;
 $primary-dark: #008793;
 
 #header {
-  margin: 20px;
+  margin: 21px;
   color: $primary-color;
   text-transform: uppercase;
   display: flex;
@@ -24,7 +24,7 @@ $primary-dark: #008793;
 
   & > * {
     margin: 0;
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 300;
     letter-spacing: 1px;
   }
