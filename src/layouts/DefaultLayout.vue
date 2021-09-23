@@ -1,7 +1,7 @@
 <template>
   <div id="container">
     <sidebar />
-    <div id="main-content">
+    <div id="main-content" class="overflow-auto">
       <transition name="fade" mode="out-in">
         <router-view />
       </transition>
@@ -12,14 +12,12 @@
 
 <script>
 import Sidebar from "@/components/Sidebar.vue"
-//import MainContentLayout from "@/layouts/MainContentLayout.vue"
 import ContactDetails from "@/components/ContactDetails.vue"
 
 export default {
   components: {
     Sidebar,
     ContactDetails
-    //MainContentLayout
   },
   data() {
     return {

@@ -9,7 +9,8 @@
       "zipcode": "92998"
     },
     "phone": "1-770-736-8031",
-    "category": "family"
+    "category": "family",
+    "avatar": "https://i.pravatar.cc/150?img=1"
   },
   {
     "id": 2,
@@ -21,7 +22,8 @@
       "zipcode": "90566"
     },
     "phone": "010-692-6593",
-    "category": "friends"
+    "category": "family",
+    "avatar": "https://i.pravatar.cc/150?img=2"
   },
   {
     "id": 3,
@@ -33,7 +35,8 @@
       "zipcode": "59590"
     },
     "phone": "1-463-123-4447",
-    "category": "work"
+    "category": "work",
+    "avatar": "https://i.pravatar.cc/150?img=16"
   },
   {
     "id": 4,
@@ -45,7 +48,8 @@
       "zipcode": "53919"
     },
     "phone": "493-170-9623 x156",
-    "category": "other"
+    "category": "other",
+    "avatar": "https://i.pravatar.cc/150?img=20"
   },
   {
     "id": 5,
@@ -57,11 +61,12 @@
       "zipcode": "33263"
     },
     "phone": "(254)954-1289",
-    "category": "family"
+    "category": "family",
+    "avatar": "https://i.pravatar.cc/150?img=5"
   },
   {
     "id": 6,
-    "name": "Mrs. Dennis Schulist",
+    "name": "Dennis Schulist",
     "email": "Karley_Dach@jasper.info",
     "address": {
       "street": "666 Norberto Crossing",
@@ -69,7 +74,8 @@
       "zipcode": "23505"
     },
     "phone": "1-477-935-8478",
-    "category": "family"
+    "category": "friends",
+    "avatar": "https://i.pravatar.cc/150?img=6"
   },
   {
     "id": 7,
@@ -81,7 +87,8 @@
       "zipcode": "58804"
     },
     "phone": "210.067.6132",
-    "category": "friends"
+    "category": "friends",
+    "avatar": "https://i.pravatar.cc/150?img=7"
   },
   {
     "id": 8,
@@ -93,7 +100,8 @@
       "zipcode": "45169"
     },
     "phone": "586.493.6943",
-    "category": "friends"
+    "category": "friends",
+    "avatar": "https://i.pravatar.cc/150?img=8"
   },
   {
     "id": 9,
@@ -105,7 +113,8 @@
       "zipcode": "76495"
     },
     "phone": "(775)976-6794",
-    "category": "work"
+    "category": "work",
+    "avatar": "https://i.pravatar.cc/150?img=9"
   },
   {
     "id": 10,
@@ -117,6 +126,7 @@
       "zipcode": "31428"
     },
     "phone": "024-648-3804",
-    "category": "other"
+    "category": "other",
+    "avatar": "https://i.pravatar.cc/150?img=10"
   }
 ]

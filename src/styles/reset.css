@@ -45,6 +45,10 @@ hr {
   color: inherit; /* Correct border color in Firefox. */
 }
 
+p {
+  margin: 0;
+}
+
 details,
 main {
   display: block; /* Render the `main` element consistently in IE. */
