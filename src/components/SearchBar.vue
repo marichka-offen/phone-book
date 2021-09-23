@@ -1,6 +1,10 @@
 <template>
   <form action="#" class="search">
-    <input type="text" placeholder="Search contacts.." />
+    <input
+      type="text"
+      placeholder="Search contacts.."
+      v-on:input="$emit('change', $event.target.value)"
+    />
 
     <i class="fas fa-search"></i>
   </form>

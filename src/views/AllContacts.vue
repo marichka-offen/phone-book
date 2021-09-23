@@ -1,12 +1,41 @@
 <template>
-  <Header><h2 slot="header">All Contacts</h2></Header>
+  <div>
+    <Header><h2 slot="header">All Contacts</h2></Header>
+    <search-bar @change="onChange" />
+    <contact
+      v-for="contact in filteredContacts"
+      :key="contact.id"
+      :contact="contact"
+    />
+  </div>
 </template>
 
 <script>
 import Header from "@/components/Header.vue"
+import Contact from "../components/Contact.vue"
+import SearchBar from "@/components/SearchBar.vue"
+import { mapGetters } from "vuex"
 
 export default {
-  components: { Header }
+  data() {
+    return {
+      search: ""
+    }
+  },
+  methods: {
+    onChange(value) {
+      this.search = value
+    }
+  },
+  components: { Header, Contact, SearchBar },
+  computed: {
+    ...mapGetters(["contacts"]),
+    filteredContacts() {
+      return this.contacts.filter((cnt) =>
+        cnt.name.toLowerCase().includes(this.search.toLowerCase())
+      )
+    }
+  }
 }
 </script>
 

@@ -1,16 +1,11 @@
 <template>
   <div id="header">
     <slot name="header"> </slot>
-    <search-bar />
   </div>
 </template>
 
 <script>
-import SearchBar from "@/components/SearchBar.vue"
-
-export default {
-  components: { SearchBar }
-}
+export default {}
 </script>
 
 <style lang="scss" scoped>
