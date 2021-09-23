@@ -1,12 +1,27 @@
 <template>
-  <div id="app">
-    Hello world
-    <!-- <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div> -->
-    <router-view />
+  <div id="app" class="d-flex justify-content-center align-items-center">
+    <default-layout />
   </div>
 </template>
 
-<style lang="scss"></style>
+<script>
+import DefaultLayout from "@/layouts/DefaultLayout.vue"
+
+export default {
+  components: { DefaultLayout }
+}
+</script>
+
+<style lang="scss">
+#app {
+  height: 100vh;
+  background-image: linear-gradient(
+    to right top,
+    #051937,
+    #004d7a,
+    #008793,
+    #00bf72,
+    #a8eb12
+  );
+}
+</style>
