@@ -1,12 +1,14 @@
 <template>
-  <Header><h2 slot="header">Other</h2></Header>
+  <div>
+    <contact-list />
+  </div>
 </template>
 
 <script>
-import Header from "@/components/Header.vue"
+import ContactList from "@/components/ContactList.vue"
 
 export default {
-  components: { Header }
+  components: { ContactList }
 }
 </script>
 
