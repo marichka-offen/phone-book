@@ -2,7 +2,9 @@
   <div id="container">
     <sidebar />
     <div id="main-content">
-      <router-view />
+      <transition name="fade" mode="out-in">
+        <router-view />
+      </transition>
     </div>
     <contact-details />
   </div>
@@ -18,6 +20,18 @@ export default {
     Sidebar,
     ContactDetails
     //MainContentLayout
+  },
+  data() {
+    return {
+      animationName: undefined
+    }
+  },
+  watch: {
+    $route(to, from) {
+      const toDepth = to.path.split("/").length
+      const fromDepth = from.path.split("/").length
+      this.animationName = toDepth < fromDepth ? "slide-right" : "slide-left"
+    }
   }
 }
 </script>
@@ -33,5 +47,14 @@ export default {
   & #main-content {
     flex-grow: 1;
   }
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>
