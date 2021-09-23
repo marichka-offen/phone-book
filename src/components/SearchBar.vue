@@ -16,11 +16,13 @@ export default {}
 
 <style lang="scss" scoped>
 // variables
+$primary-color: #00bf72;
 $color-grey-light-2: #f4f2f2;
 $color-grey-light-3: #f0eeee;
 $color-grey-light-4: #ccc;
 
 .search {
+  margin-right: 20px;
   flex: 0 0 40%;
   display: flex;
   align-items: center;
@@ -28,7 +30,7 @@ $color-grey-light-4: #ccc;
 
   & input {
     font-size: 15px;
-    color: inherit;
+    color: $primary-color;
     background-color: $color-grey-light-2;
     border: none;
     padding: 10px 20px;
@@ -57,6 +59,7 @@ $color-grey-light-4: #ccc;
 
   & i {
     font-size: 20px;
+    color: $primary-color;
   }
 }
 </style>
