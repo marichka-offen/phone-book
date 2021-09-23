@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Leanne Graham",
+    "email": "Sincere@april.biz",
+    "address": {
+      "street": "123 Kulas Light",
+      "city": "Gwenborough",
+      "zipcode": "92998"
+    },
+    "phone": "1-770-736-8031",
+    "category": "family"
+  },
+  {
+    "id": 2,
+    "name": "Ervin Howell",
+    "email": "Shanna@melissa.tv",
+    "address": {
+      "street": "564 Victor Plains",
+      "city": "Wisokyburgh",
+      "zipcode": "90566"
+    },
+    "phone": "010-692-6593",
+    "category": "friends"
+  },
+  {
+    "id": 3,
+    "name": "Clementine Bauch",
+    "email": "Nathan@yesenia.net",
+    "address": {
+      "street": "9834 Douglas Extension",
+      "city": "McKenziehaven",
+      "zipcode": "59590"
+    },
+    "phone": "1-463-123-4447",
+    "category": "work"
+  },
+  {
+    "id": 4,
+    "name": "Patricia Lebsack",
+    "email": "Julianne.OConner@kory.org",
+    "address": {
+      "street": "78 Hoeger Mall",
+      "city": "South Elvis",
+      "zipcode": "53919"
+    },
+    "phone": "493-170-9623 x156",
+    "category": "other"
+  },
+  {
+    "id": 5,
+    "name": "Chelsey Dietrich",
+    "email": "Lucio_Hettinger@annie.ca",
+    "address": {
+      "street": "121 Skiles Walks",
+      "city": "Roscoeview",
+      "zipcode": "33263"
+    },
+    "phone": "(254)954-1289",
+    "category": "family"
+  },
+  {
+    "id": 6,
+    "name": "Mrs. Dennis Schulist",
+    "email": "Karley_Dach@jasper.info",
+    "address": {
+      "street": "666 Norberto Crossing",
+      "city": "South Christy",
+      "zipcode": "23505"
+    },
+    "phone": "1-477-935-8478",
+    "category": "family"
+  },
+  {
+    "id": 7,
+    "name": "Kurtis Weissnat",
+    "email": "Telly.Hoeger@billy.biz",
+    "address": {
+      "street": "1 Rex Trail",
+      "city": "Howemouth",
+      "zipcode": "58804"
+    },
+    "phone": "210.067.6132",
+    "category": "friends"
+  },
+  {
+    "id": 8,
+    "name": "Nicholas Runolfsdottir V",
+    "email": "Sherwood@rosamond.me",
+    "address": {
+      "street": "539 Ellsworth Summit",
+      "city": "Aliyaview",
+      "zipcode": "45169"
+    },
+    "phone": "586.493.6943",
+    "category": "friends"
+  },
+  {
+    "id": 9,
+    "name": "Glenna Reichert",
+    "email": "Chaim_McDermott@dana.io",
+    "address": {
+      "street": "78123 Dayna Park",
+      "city": "Bartholomebury",
+      "zipcode": "76495"
+    },
+    "phone": "(775)976-6794",
+    "category": "work"
+  },
+  {
+    "id": 10,
+    "name": "Clementina DuBuque",
+    "email": "Rey.Padberg@karina.biz",
+    "address": {
+      "street": "32 Kattie Turnpike",
+      "city": "Lebsackbury",
+      "zipcode": "31428"
+    },
+    "phone": "024-648-3804",
+    "category": "other"
+  }
+]
