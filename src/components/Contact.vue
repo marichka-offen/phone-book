@@ -4,9 +4,7 @@
       <img class="avatar" :src="contact.avatar" />
       <div>
         <p class="name">{{ contact.name }}</p>
-        <p class="address">
-          {{ contact.address.street }}, {{ contact.address.city }}
-        </p>
+        <p class="address">{{ contact.street }}, {{ contact.city }}</p>
       </div>
     </div>
     <div class="contacts">

@@ -6,7 +6,7 @@
       </button>
       <modal v-if="openModal" @close="openModal = false">
         <p slot="header">Add New Contact</p>
-        <add-contact-form slot="body" />
+        <add-contact-form slot="body" @close="openModal = false" />
       </modal>
     </div>
     <hr class="divider" />

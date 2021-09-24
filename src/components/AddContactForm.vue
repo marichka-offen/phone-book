@@ -1,45 +1,125 @@
 <template>
-  <form>
+  <form @submit.prevent="onSubmit">
     <div class="mb-3">
       <label for="contactName" class="form-label">Name</label>
-      <input type="text" class="form-control" id="contactName" />
+      <input
+        v-model="contact.name"
+        type="text"
+        class="form-control"
+        id="contactName"
+      />
     </div>
     <div class="mb-3">
       <label for="contactEmail" class="form-label">Email</label>
-      <input type="email" class="form-control" id="contactEmail" />
+      <input
+        v-model="contact.email"
+        type="email"
+        class="form-control"
+        id="contactEmail"
+      />
     </div>
     <div class="mb-3">
       <label for="contactAddress" class="form-label">Address</label>
-      <input type="text" class="form-control" id="contactAddress" />
+      <input
+        v-model="contact.street"
+        type="text"
+        class="form-control"
+        id="contactAddress"
+      />
     </div>
     <div class="mb-3">
       <label for="contactCity" class="form-label">City</label>
-      <input type="text" class="form-control" id="contactCity" />
+      <input
+        v-model="contact.city"
+        type="text"
+        class="form-control"
+        id="contactCity"
+      />
     </div>
     <div class="mb-3">
       <label for="contactPhone" class="form-label">Phone</label>
-      <input type="tel" class="form-control" id="contactPhone" />
+      <input
+        v-model="contact.phone"
+        type="tel"
+        class="form-control"
+        id="contactPhone"
+      />
     </div>
     <div class="mb-3">
       <label for="contactCategory" class="form-label">Category</label>
-      <select class="form-select mb-3" id="contactCategory">
-        <option selected disabled>Select category..</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
+      <select
+        class="form-select mb-3"
+        id="contactCategory"
+        v-model="contact.category"
+      >
+        <option disabled>Select category..</option>
+        <option
+          v-for="option in categories"
+          :value="option"
+          :key="option"
+          :selected="option === contact.category"
+        >
+          {{ option }}
+        </option>
       </select>
     </div>
     <div class="mb-3">
       <label for="contactAvatar" class="form-label">Avatar URL</label>
-      <input type="url" class="form-control" id="contactAvatar" />
+      <input
+        v-model="contact.avatar"
+        type="url"
+        class="form-control"
+        id="contactAvatar"
+      />
     </div>
 
-    <button type="submit" class="btn submit-button">Add Contact</button>
+    <button type="submit" class="btn submit-button" @click="onSubmit">
+      Add Contact
+    </button>
   </form>
 </template>
 
 <script>
-export default {}
+import { v4 as uuidv4 } from "uuid"
+
+export default {
+  data() {
+    return {
+      categories: ["family", "friends", "work", "other"],
+      contact: this.newContactObject()
+    }
+  },
+  methods: {
+    onSubmit() {
+      let contact = {
+        ...this.contact,
+        id: uuidv4()
+      }
+
+      if (!this.contact.category) {
+        contact = {
+          ...this.contact,
+          category: "other"
+        }
+      }
+
+      this.$store.dispatch("createContact", contact)
+      this.$emit("close")
+    },
+    newContactObject() {
+      return {
+        id: "",
+        name: "",
+        email: "",
+        street: "",
+        city: "",
+        phone: "",
+        category: "",
+        avatar: ""
+      }
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>

@@ -14,21 +14,15 @@ export default new Vuex.Store({
       return state.contacts
     }
   },
-  mutations: {},
-  actions: {},
+  mutations: {
+    ADD_CONTACT(state, contact) {
+      state.contacts.push(contact)
+    }
+  },
+  actions: {
+    createContact({ commit }, contact) {
+      commit("ADD_CONTACT", contact)
+    }
+  },
   modules: {}
 })
-
-// export default {
-//     getEvents(perPage, page) {
-//         return apiClient.get('/events?_limit=' + perPage + '&_page=' + page)
-//     },
-
-//     getEvent(id) {
-//         return apiClient.get('/events/' + id)
-//     },
-
-//     postEvent(event) { // new post request
-//         return apiClient.post('/events', event)
-//       }
-// }
