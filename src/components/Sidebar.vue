@@ -1,9 +1,13 @@
 <template>
   <div id="left-drawer">
     <div class="d-flex justify-content-center">
-      <button class="add-user-btn">
+      <button class="add-user-btn" @click="openModal = true">
         <i class="fas fa-user-plus"></i>
       </button>
+      <modal v-if="openModal" @close="openModal = false">
+        <p slot="header">Add New Contact</p>
+        <add-contact-form slot="body" />
+      </modal>
     </div>
     <hr class="divider" />
     <div class="nav-links">
@@ -28,7 +32,20 @@
 </template>
 
 <script>
-export default {}
+import Modal from "@/components/Modal"
+import AddContactForm from "@/components/AddContactForm.vue"
+
+export default {
+  data() {
+    return {
+      openModal: false
+    }
+  },
+  components: {
+    Modal,
+    AddContactForm
+  }
+}
 </script>
 
 <style lang="scss" scoped>

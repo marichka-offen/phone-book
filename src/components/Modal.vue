@@ -58,7 +58,7 @@ $color-grey-light-4: #ccc;
   &-container {
     width: 400px;
     margin: 0 auto;
-    padding: 10px 25px 20px;
+    padding: 10px 20px 20px;
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
@@ -72,7 +72,6 @@ $color-grey-light-4: #ccc;
     color: $primary-color;
   }
   &-body {
-    margin: 20px 0;
     max-height: 500px;
     overflow-y: auto;
     padding: 10px;
