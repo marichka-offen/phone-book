@@ -12,8 +12,8 @@
         <p>{{ contact.email }}</p>
         <p>{{ contact.phone }}</p>
       </div>
-      <div class="buttons" @click="onDelete">
-        <button>
+      <div class="buttons">
+        <button @click="onEdit">
           <i class="fas fa-edit"></i>
         </button>
         <button @click="onDelete">
@@ -34,9 +34,10 @@ export default {
   },
   methods: {
     onDelete() {
+      console.log("object")
       this.$store.dispatch("deleteContact", this.contact)
     },
-    onUpdate() {}
+    onEdit() {}
   }
 }
 </script>
