@@ -27,8 +27,10 @@ export default {
 
 <style lang="scss" scoped>
 // variables
+$color-grey-light: #faf9f9;
 $color-grey-light-2: #f4f2f2;
 $color-grey-dark: #999;
+$primary-color: #00bf72;
 
 #contact {
   padding: 10px;
@@ -36,6 +38,30 @@ $color-grey-dark: #999;
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid $color-grey-light-2;
+  position: relative;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 5px;
+    background-color: $primary-color;
+    transform: scaleY(0);
+    transition: transform 0.5s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s,
+      background-color 0.1s;
+  }
+
+  &:hover::before {
+    transform: scaleY(1);
+  }
+
+  //   &:hover {
+  //     background-color: $color-grey-light;
+  //     border-left: 5px solid $primary-color;
+  //   }
 
   & .avatar {
     height: 50px;

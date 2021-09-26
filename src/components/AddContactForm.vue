@@ -129,7 +129,6 @@ $primary-color: #00bf72;
 $primary-dark: #008793;
 
 form {
-  //background-color: $color-grey-light;
   padding: 15px;
 }
 
