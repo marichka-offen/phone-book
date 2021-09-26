@@ -48,7 +48,7 @@
     <div class="mb-3">
       <label for="contactCategory" class="form-label">Category</label>
       <select
-        class="form-select mb-3"
+        class="form-select"
         id="contactCategory"
         v-model="contact.category"
       >
@@ -62,6 +62,9 @@
           {{ option }}
         </option>
       </select>
+      <p id="categoryHelp" class="form-text">
+        If not selected, contact will be automatically added to "Other" category
+      </p>
     </div>
     <div class="mb-3">
       <label for="contactAvatar" class="form-label">Avatar URL</label>
@@ -125,6 +128,7 @@ export default {
 <style lang="scss" scoped>
 // variables
 $color-grey-light: #faf9f9;
+$color-grey-light-4: #ccc;
 $primary-color: #00bf72;
 $primary-dark: #008793;
 
@@ -149,5 +153,9 @@ label {
   &:focus {
     background-color: $primary-dark;
   }
+}
+
+#categoryHelp {
+  color: $color-grey-light-4;
 }
 </style>
