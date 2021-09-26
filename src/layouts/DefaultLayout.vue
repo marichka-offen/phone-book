@@ -6,18 +6,15 @@
         <router-view />
       </transition>
     </div>
-    <contact-details />
   </div>
 </template>
 
 <script>
 import Sidebar from "@/components/Sidebar.vue"
-import ContactDetails from "@/components/ContactDetails.vue"
 
 export default {
   components: {
-    Sidebar,
-    ContactDetails
+    Sidebar
   },
   data() {
     return {
@@ -41,6 +38,8 @@ export default {
   height: 600px;
   background-color: #fff;
   display: flex;
+  overflow: hidden;
+  position: relative;
 
   & #main-content {
     flex-grow: 1;
