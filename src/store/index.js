@@ -14,14 +14,23 @@ export default new Vuex.Store({
       return state.contacts
     }
   },
+
   mutations: {
     ADD_CONTACT(state, contact) {
       state.contacts.push(contact)
+    },
+    DELETE_CONTACT(state, contact) {
+      let index = state.contacts.findIndex((cnt) => cnt.id == contact.id)
+      state.contacts.splice(index, 1)
     }
   },
+
   actions: {
     createContact({ commit }, contact) {
       commit("ADD_CONTACT", contact)
+    },
+    deleteContact({ commit }, contact) {
+      commit("DELETE_CONTACT", contact)
     }
   },
   modules: {}

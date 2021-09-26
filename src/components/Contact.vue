@@ -7,9 +7,19 @@
         <p class="address">{{ contact.street }}, {{ contact.city }}</p>
       </div>
     </div>
-    <div class="contacts">
-      <p>{{ contact.email }}</p>
-      <p>{{ contact.phone }}</p>
+    <div class="d-flex">
+      <div class="contacts">
+        <p>{{ contact.email }}</p>
+        <p>{{ contact.phone }}</p>
+      </div>
+      <div class="buttons" @click="onDelete">
+        <button>
+          <i class="fas fa-edit"></i>
+        </button>
+        <button @click="onDelete">
+          <i class="fas fa-trash"></i>
+        </button>
+      </div>
     </div>
   </div>
 </template>
@@ -21,6 +31,12 @@ export default {
       type: Object,
       required: true
     }
+  },
+  methods: {
+    onDelete() {
+      this.$store.dispatch("deleteContact", this.contact)
+    },
+    onUpdate() {}
   }
 }
 </script>
@@ -29,6 +45,7 @@ export default {
 // variables
 $color-grey-light: #faf9f9;
 $color-grey-light-2: #f4f2f2;
+$color-grey-light-3: #e7e4e4;
 $color-grey-dark: #999;
 $primary-color: #00bf72;
 
@@ -39,7 +56,7 @@ $primary-color: #00bf72;
   justify-content: space-between;
   border-bottom: 1px solid $color-grey-light-2;
   position: relative;
-  cursor: pointer;
+  transition: 0.25s;
 
   &::before {
     content: "";
@@ -57,11 +74,6 @@ $primary-color: #00bf72;
   &:hover::before {
     transform: scaleY(1);
   }
-
-  //   &:hover {
-  //     background-color: $color-grey-light;
-  //     border-left: 5px solid $primary-color;
-  //   }
 
   & .avatar {
     height: 50px;
@@ -85,9 +97,25 @@ $primary-color: #00bf72;
 
   & .contacts {
     text-align: right;
-    font-size: 12px;
+    font-size: 14px;
     margin-top: 10px;
     color: $color-grey-dark;
+    width: 150%;
+  }
+}
+
+.buttons {
+  margin-left: 30px;
+  align-self: center;
+  & > * {
+    font-size: 20px;
+    padding-right: 5px;
+    transition: 0.25s;
+    color: $color-grey-light-3;
+
+    &:hover {
+      color: $primary-color;
+    }
   }
 }
 </style>
