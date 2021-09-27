@@ -13,9 +13,18 @@
         <p>{{ contact.phone }}</p>
       </div>
       <div class="buttons">
-        <button @click="onEdit">
+        <button @click="openModal = true">
           <i class="fas fa-edit"></i>
         </button>
+        <modal v-if="openModal" @close="openModal = false">
+          <p slot="header">Edit Contact</p>
+          <edit-contact-form
+            slot="body"
+            @close="openModal = false"
+            :contact="contact"
+          />
+        </modal>
+
         <button @click="onDelete">
           <i class="fas fa-trash"></i>
         </button>
@@ -25,7 +34,19 @@
 </template>
 
 <script>
+import Modal from "@/components/Modal"
+import EditContactForm from "@/components/EditContactForm.vue"
+
 export default {
+  data() {
+    return {
+      openModal: false
+    }
+  },
+  components: {
+    Modal,
+    EditContactForm
+  },
   props: {
     contact: {
       type: Object,
