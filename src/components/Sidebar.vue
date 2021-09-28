@@ -59,6 +59,11 @@ $primary-dark: #008793;
   height: 100%;
   background-color: #051937;
 
+  @media only screen and (max-width: 850px) {
+    width: 100%;
+    height: max-content;
+  }
+
   & .add-user-btn {
     color: $color-grey-light;
     border: 2px solid $color-grey-light;
@@ -86,6 +91,15 @@ $primary-dark: #008793;
   }
 
   & .nav-links {
+    @media only screen and (max-width: 850px) {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    @media only screen and (max-width: 650px) {
+      font-size: 14px;
+    }
+
     & a {
       position: relative;
       display: flex;
@@ -98,8 +112,12 @@ $primary-dark: #008793;
       color: $color-grey-light;
       font-size: 18px;
       opacity: 0.8;
-      width: 30px;
+      width: 20px;
       text-align: center;
+
+      @media only screen and (max-width: 650px) {
+        font-size: 12px;
+      }
     }
 
     & a::before {
@@ -135,6 +153,11 @@ $primary-dark: #008793;
       color: $color-grey-light;
       position: relative;
       z-index: 10;
+
+      @media only screen and (max-width: 650px) {
+        font-size: 10px;
+        margin-left: 2px;
+      }
     }
   }
 }

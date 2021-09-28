@@ -77,7 +77,7 @@
     </div>
 
     <button type="submit" class="btn submit-button" @click="onSubmit">
-      Edit Contact
+      Update Contact
     </button>
   </form>
 </template>

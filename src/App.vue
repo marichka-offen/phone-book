@@ -23,5 +23,8 @@ export default {
     #00bf72,
     #a8eb12
   );
+  @media only screen and (max-width: 1200px) {
+    height: 100%;
+  }
 }
 </style>

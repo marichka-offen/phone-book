@@ -33,13 +33,23 @@ export default {
 
 <style lang="scss" scoped>
 #container {
-  width: 70vw;
+  //width: 70vw;
   box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.3);
   height: 600px;
   background-color: #fff;
   display: flex;
   overflow: hidden;
   position: relative;
+  width: 1200px;
+
+  @media only screen and (max-width: 1200px) {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  @media only screen and (max-width: 850px) {
+    flex-direction: column;
+  }
 
   & #main-content {
     flex-grow: 1;
