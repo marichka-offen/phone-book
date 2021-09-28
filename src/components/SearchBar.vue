@@ -10,10 +10,6 @@
   </form>
 </template>
 
-<script>
-export default {}
-</script>
-
 <style lang="scss" scoped>
 // variables
 $primary-color: #00bf72;
