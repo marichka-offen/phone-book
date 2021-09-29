@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DefaultLayout.vue renders basic components for app layout 1`] = `
+<div id="container">
+  <div id="left-drawer">
+    <div class="d-flex justify-content-center"><button class="add-user-btn"><i class="fas fa-user-plus"></i></button>
+      <!---->
+    </div>
+    <hr class="divider">
+    <div class="nav-links">
+      <router-link-stub to="/"><i class="fas fa-globe-europe"></i><span>All Contacts</span></router-link-stub>
+      <router-link-stub to="/family"><i class="fas fa-home"></i><span>Family</span></router-link-stub>
+      <router-link-stub to="/friends"><i class="fas fa-users"></i><span>Friends</span></router-link-stub>
+      <router-link-stub to="/work"><i class="fas fa-briefcase"></i><span>Work</span></router-link-stub>
+      <router-link-stub to="/other"><i class="fas fa-address-book"></i><span>Other</span></router-link-stub>
+    </div>
+  </div>
+  <div id="main-content" class="overflow-auto">
+    <transition-stub name="fade" mode="out-in">
+      <router-view-stub></router-view-stub>
+    </transition-stub>
+  </div>
+</div>
+`;

@@ -1,5 +1,5 @@
 <template>
-  <div id="contact">
+  <div id="contact" :id="`contact-id-${contact.id}`">
     <div class="d-flex">
       <img class="avatar" :src="contact.avatar" />
       <div>

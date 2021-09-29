@@ -9,12 +9,6 @@ export default new Vuex.Store({
     contacts
   },
 
-  getters: {
-    contacts(state) {
-      return state.contacts
-    }
-  },
-
   mutations: {
     ADD_CONTACT(state, contact) {
       state.contacts.push(contact)
@@ -42,3 +36,9 @@ export default new Vuex.Store({
   },
   modules: {}
 })
+
+export const getters = {
+  contacts(state) {
+    return state.contacts
+  }
+}

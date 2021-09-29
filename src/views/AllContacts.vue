@@ -14,7 +14,7 @@
 
 <script>
 import Header from "@/components/Header.vue"
-import Contact from "../components/Contact.vue"
+import Contact from "@/components/Contact.vue"
 import SearchBar from "@/components/SearchBar.vue"
 import { mapGetters } from "vuex"
 
